@@ -1,0 +1,16 @@
+{
+  "name": "taxCalc",
+  "version": "1.0.0",
+  "description": "taxCalc",
+  "dependencies": {
+    "csv": "latest",
+    "debug": "^2.2.0",
+    "fs": "latest",
+    "lodash": "latest"
+  },
+  "author": "Mayank",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2"
+  }
+}
