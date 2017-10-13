@@ -17,6 +17,8 @@ var taxApi = {
 
 	computeTax: function(csvData, cb) {
 		// assumes that the columns in csv will be in order - Quantity, Product, Price, otherwise we need to map and maintain order
+		// asumption - prices in the input csv are for 'n' units mentioned in the quantity and not for 1 unit,
+		// otherwise a mulitplication is needed with the computed price
 		// drop first row from csvData because its the row with headers
 		csvData = _.drop(csvData);
 		var totalTax = 0,
