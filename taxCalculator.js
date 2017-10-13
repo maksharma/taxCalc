@@ -4,7 +4,6 @@
  **/
 
 var taxApi = require("./api").tax;
-// var lib = require("./util").lib;
 
 // -- Invoking Code ---------------------------------------------------------
 if (require.main === module) {

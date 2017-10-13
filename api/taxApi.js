@@ -9,16 +9,16 @@ var taxApi = {
 	calcTax: function(filepath, cb) {
 		lib.convertToJson(filepath, function(err, res) {
 			if (err != null) {
-				return cb(err, null)
+				return cb(err, null);
 			}
-			taxApi.computeTax(res, cb)
+			taxApi.computeTax(res, cb);
 		});
 	},
 
 	computeTax: function(csvData, cb) {
 		// assumes that the columns in csv will be in order - Quantity, Product, Price, otherwise we need to map and maintain order
 		// drop first row from csvData because its the row with headers
-		csvData = _.drop(csvData)
+		csvData = _.drop(csvData);
 		var totalTax = 0,
 			totalAmount = 0,
 			displayData = "";
@@ -52,7 +52,7 @@ var taxApi = {
 			dataRow[2] = price;
 			totalTax += Number(tax);
 			totalAmount += Number(price);
-			displayData = displayData + dataRow.toString() + "\n"
+			displayData = displayData + dataRow.toString() + "\n";
 
 		})
 		displayData = displayData + "\n";
