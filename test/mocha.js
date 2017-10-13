@@ -45,6 +45,19 @@ describe("input3 test", function() {
   });
 });
 
+describe("input3 - test absolute path", function() {
+  it("returns tax calculation for input3.csv", function(done) {
+    taxApi.calcTax("/Users/user/code/input3.csv", function(err, res) {
+      assert.isNull(err, "There was no error");
+      assert.isNotNull(res, "Got a result");
+      assert.equal(res,
+        "1,imported bottle of perfume,32.19\n1,bottle of perfume,20.89\n1,packet of headache pills,9.75\n1,imported box of chocolates,11.81\n\nSales Taxes: 6.66\nTotal: 74.64\n",
+        "Final result isn't what is expected")
+      done();
+    });
+  });
+});
+
 describe("failure test", function() {
   it("checks failure condition for filenot found", function(done) {
     taxApi.calcTax("input_test.csv", function(err, res) {
