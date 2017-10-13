@@ -1,5 +1,5 @@
 # taxCalc
-Calculate taxes based on csv input based on the following conditions:
+Calculate taxes for a csv input based on the following conditions and prints the output on terminal:
 
 Basic sales tax is applicable at a rate of 10% on all goods, except books, food,
 and medical products that are exempt. Import duty is an additional sales tax applicable
